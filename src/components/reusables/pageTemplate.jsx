@@ -1,14 +1,14 @@
 import { cn } from "@/lib/utils";
 import React from "react";
+import TintedImg from "./tintedImage";
 
-const PageTemplate = ({ tint, opacity, children }) => {
-  // const bgTint = `bg-${tint}/${opacity}`;
-  const bgTint = `bg-[${tint}/${opacity}]`;
+import IMG from "@/assets/FM-pic1.webp";
 
+const PageTemplate = ({ tint, children, img }) => {
   return (
-    <section className="h-svh w-full ">
-      {children}
-      <div className={cn("h-svh w-full", bgTint)} />
+    <section className="relative h-svh w-full ">
+      <div className="absolute w-full h-full">{children}</div>
+      <TintedImg src={img} tint={tint} />
     </section>
   );
 };

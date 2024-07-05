@@ -1,5 +1,5 @@
 "use client";
-import PageTemplate from "@/components/reusables/pageTemplate";
+import FirstSection from "@/components/sections/section/first";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -12,11 +12,7 @@ export default function Home() {
 
   return (
     <main>
-      <PageTemplate></PageTemplate>
-      <PageTemplate></PageTemplate>
-      <PageTemplate></PageTemplate>
-      <PageTemplate></PageTemplate>
-      <PageTemplate></PageTemplate>
+      <FirstSection />
     </main>
   );
 }
