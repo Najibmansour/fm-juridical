@@ -9,8 +9,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { List } from "@phosphor-icons/react";
 
-routes = [
+const routes = [
   { title: "About us", href: "/about" },
   { title: "Services", href: "/services" },
   { title: "Locations", href: "/locations" },
@@ -19,42 +20,35 @@ routes = [
 
 const Navbar = () => {
   return (
-    <nav className="w-full">
-      <div className="md:hidden">
+    <div className="w-full">
+      <nav className="md:hidden">
         {routes.map(({ title, href }) => (
           <Link key={title} href={href}>
             {title}
           </Link>
         ))}
-      </div>
+      </nav>
       <div className="hidden">
         <Sheet className="md:hidden">
           <SheetTrigger asChild>
-            <MenuIcon className="size-10 text-[#fafafa]" />
+            {/* <List className="size-10 text-[#fafafa]" /> */}
           </SheetTrigger>
           <SheetContent
             side="left"
             className="w-[100%] border-0 bg-[#9a020200] backdrop-blur"
           >
-            <SheetHeader>
-              <LOGOIMG className="h-20 w-full" />
-            </SheetHeader>
             <div className="grid gap-10 py-10 text-center">
-              {navigation.map(({ title, href }, i) => (
+              {routes.map(({ title, href }, i) => (
                 <Link key={i} href={href} className="text-4xl text-[#fafafa]">
                   {title}
                 </Link>
               ))}
             </div>
-            <SheetFooter>
-              {/* <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
-          </SheetClose> */}
-            </SheetFooter>
+            <SheetFooter></SheetFooter>
           </SheetContent>
         </Sheet>
       </div>
-    </nav>
+    </div>
   );
 };
 

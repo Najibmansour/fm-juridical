@@ -1,5 +1,6 @@
 import { Judson } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/navbar";
 
 const judson = Judson({ subsets: ["latin"], weight: "400" });
 
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={judson.className}>{children}</body>
+      <body className={judson.className}>
+        {/* <Navbar /> */}
+        {children}
+      </body>
     </html>
   );
 }

@@ -6,7 +6,7 @@ const TintedImg = ({ tint, src, className }) => {
   return (
     <div className="-z-30 w-full h-full absolute ">
       <div className={cn("relative w-full h-full", className)}>
-        <Image src={src} layout="fill" alt="image" />
+        <Image src={src} layout="fill" alt="image" objectFit="cover" />
         <div className={cn("absolute h-svh w-full ", tint)} />
       </div>
     </div>
