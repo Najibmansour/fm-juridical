@@ -13,7 +13,7 @@ import Link from "next/link";
 const Navmenu = ({ routes }) => {
   return (
     <div className="md:hidden">
-      <Sheet className="md:hidden">
+      <Sheet className="">
         <SheetTrigger asChild>
           <MenuIcon className="size-10 text-[#fafafa]" />
         </SheetTrigger>
@@ -22,7 +22,7 @@ const Navmenu = ({ routes }) => {
           className="w-[100%] border-0 bg-[#9a020200] backdrop-blur"
         >
           <SheetHeader>
-            <p>asdadas</p>
+            <p>LOGOOOO</p>
           </SheetHeader>
           <div className="grid gap-10 py-10 text-center">
             {routes.map(({ title, href }, i) => (

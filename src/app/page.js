@@ -1,5 +1,7 @@
 "use client";
-import FirstSection from "@/components/sections/section/first";
+
+import LowerSection from "@/components/sections/lowerSection";
+import UpperSection from "@/components/sections/uppperSection";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -11,8 +13,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
-      <FirstSection />
+    <main className="grid ">
+      <UpperSection></UpperSection>
+      <LowerSection></LowerSection>
     </main>
   );
 }
