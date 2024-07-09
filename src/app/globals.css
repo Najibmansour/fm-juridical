@@ -16,7 +16,7 @@
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 96.1%;
+    --secondary: 42, 54%, 51%;
     --secondary-foreground: 0 0% 9%;
 
     --muted: 0 0% 96.1%;
@@ -72,5 +72,13 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  h2 {
+    @apply text-6xl;
+  }
+
+  p {
+    @apply text-xl;
   }
 }

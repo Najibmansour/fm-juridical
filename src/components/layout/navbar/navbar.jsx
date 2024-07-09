@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link
             key={title}
             href={href}
-            className="hover:text-[#C59D3D] hover:underline underline-offset-8 transition-all"
+            className="hover:text-secondary hover:underline underline-offset-8 transition-all"
           >
             {title}
           </Link>
