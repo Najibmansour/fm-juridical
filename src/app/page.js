@@ -13,7 +13,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="grid ">
+    <main className="grid pointer-events-none">
       <UpperSection></UpperSection>
       <LowerSection></LowerSection>
     </main>
