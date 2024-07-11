@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={cn(judson.className, "relative")}>
+      <body className={cn(judson.className, "pointer-events-none relative")}>
         <Navbar />
         {children}
       </body>

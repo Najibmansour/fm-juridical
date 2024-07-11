@@ -4,10 +4,10 @@ import React from "react";
 
 const TintedImg = ({ tint, src, className }) => {
   return (
-    <div className="-z-30 w-full h-full absolute ">
-      <div className={cn("relative w-full h-full", className)}>
+    <div className="absolute h-svh w-full">
+      <div className={cn("relative h-full w-full", className)}>
         <Image src={src} layout="fill" alt="image" objectFit="cover" />
-        <div className={cn("absolute h-svh w-full ", tint)} />
+        <div className={cn("absolute h-svh w-full", tint)} />
       </div>
     </div>
   );

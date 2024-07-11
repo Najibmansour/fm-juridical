@@ -15,29 +15,31 @@ const Services = () => {
   // const refBot = useRef();
 
   return (
-    <main className="grid">
-      <div className="col-span-1 col-start-1 row-start-1 h-svh">
-        <div className="-z-40">
-          <PageTemplate img={PATTERN} className="border-b-2 border-white">
-            <div className="flex h-full w-full flex-col items-center justify-start py-28">
-              <div className="grid w-[90%] grid-cols-1 gap-10 md:grid-cols-2">
-                <ServiceCard img={IMG1} title="Real Estate Law" />
-                <ServiceCard img={IMG2} title="Employment Law" />
+    <main>
+      <div className="pointer-events-none grid">
+        <div className="pointer-events-auto col-span-1 col-start-1 row-start-1 h-svh">
+          <div className="-z-40">
+            <PageTemplate img={PATTERN} className="border-b-2 border-white">
+              <div className="flex h-full w-full flex-col items-center justify-start py-28">
+                <div className="grid w-[90%] grid-cols-1 gap-10 md:grid-cols-2">
+                  <ServiceCard img={IMG1} title="Real Estate Law" />
+                  <ServiceCard img={IMG2} title="Employment Law" />
+                </div>
               </div>
-            </div>
-          </PageTemplate>
+            </PageTemplate>
+          </div>
         </div>
-      </div>
-      <div className="pointer-events-none relative col-span-1 col-start-1 row-start-1 h-[calc(200svh)] w-full">
-        <div className="sticky top-0 -z-50">
-          <PageTemplate img={PATTERN} className="sticky top-0">
-            <div className="flex h-3/4 w-full flex-col items-center justify-center">
-              <Form />
-            </div>
-            <div className="flex h-1/4 w-full flex-col items-center justify-center">
-              <Footer />
-            </div>
-          </PageTemplate>
+        <div className="relative col-span-1 col-start-1 row-start-1 h-[calc(200svh)] w-full">
+          <div className="sticky top-0 -z-50">
+            <PageTemplate img={PATTERN} className="sticky top-0">
+              <div className="flex h-[80%] w-full flex-col items-center justify-center md:h-3/4">
+                <Form />
+              </div>
+              <div className="flex h-[20%] w-full flex-col items-center justify-center md:h-1/4">
+                <Footer />
+              </div>
+            </PageTemplate>
+          </div>
         </div>
       </div>
     </main>

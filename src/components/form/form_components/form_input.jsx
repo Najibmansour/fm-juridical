@@ -10,7 +10,12 @@ export default function FormInput({
   className,
 }) {
   return (
-    <div className={cn(className, "flex h-auto w-full flex-col gap-1")}>
+    <div
+      className={cn(
+        className,
+        "pointer-events-auto flex h-auto w-full flex-col gap-1",
+      )}
+    >
       <label className="text-xl">{title}:</label>
       <input
         className="border-2 bg-transparent px-4 py-2"
@@ -33,18 +38,20 @@ export function FormTextarea({
   className,
 }) {
   return (
-    <div className={cn(className, "flex h-auto w-full flex-col")}>
+    <div
+      className={cn(
+        className,
+        "pointer-events-auto flex h-full w-full flex-col",
+      )}
+    >
       <label className="">{title}:</label>
       <textarea
-        className=""
+        className="max-h-1/4 min-h-[90%] border-2 bg-transparent px-4 py-2"
         type="text"
         id={use_name}
         placeholder={placeholder}
         {...registerOBJ(use_name, restrictions)}
       />
-      {errorsOBJ[use_name]?.message && (
-        <span className="text-center">{errorsOBJ[use_name]?.message}</span>
-      )}
     </div>
   );
 }

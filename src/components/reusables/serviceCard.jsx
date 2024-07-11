@@ -10,7 +10,7 @@ const ServiceCard = ({ img, title }) => {
           alt="asd"
           className="peer aspect-video transform object-cover transition-transform duration-300 hover:scale-110"
         />
-        <div class="pointer-events-none absolute inset-0 bg-primary opacity-30 transition-opacity duration-300 peer-hover:opacity-0" />
+        <div className="pointer-events-none absolute inset-0 bg-primary opacity-40 transition-opacity duration-300 peer-hover:opacity-0" />
       </div>
       <p className="text-xl tracking-wide">{title}</p>
     </div>
