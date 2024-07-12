@@ -13,14 +13,18 @@ const routes = [
 
 const Navbar = () => {
   return (
-    <div className="w-full absolute p-6 z-50">
-      <nav className="lg:flex hidden text-4xl w-full justify-around">
+    <div className="absolute z-50 w-full p-6">
+      <nav className="hidden w-full justify-around text-4xl lg:flex">
         {routes.map(({ title, href }) => (
-          <Link key={title} href={href} className="relative group ">
+          <Link
+            key={title}
+            href={href}
+            className="group pointer-events-auto relative"
+          >
             <span className="cursor-pointer transition-all duration-300 hover:text-secondary">
               {title}
             </span>
-            <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-secondary  duration-300 ease-out group-hover:w-full -translate-x-1/2" />
+            <div className="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 bg-secondary duration-300 ease-out group-hover:w-full" />
           </Link>
         ))}
       </nav>

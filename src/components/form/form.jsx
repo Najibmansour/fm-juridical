@@ -35,7 +35,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid h-[90%] w-[80%] grid-cols-1 grid-rows-6 bg-green-500/10 md:h-[70%] md:w-3/4 md:grid-cols-3 md:grid-rows-7 md:gap-4"
+      className="grid h-[90%] w-[80%] grid-cols-1 grid-rows-6 md:h-[70%] md:w-3/4 md:grid-cols-3 md:grid-rows-7 md:gap-4"
     >
       <div className="flex flex-col md:col-span-1 md:col-start-1 md:row-span-2 md:row-start-1">
         <FormInput
