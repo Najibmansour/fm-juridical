@@ -11,9 +11,6 @@ import Footer from "@/components/layout/footer/footer";
 import Form from "@/components/form/form";
 
 const Services = () => {
-  // const refTop = useRef();
-  // const refBot = useRef();
-
   return (
     <main>
       <div className="pointer-events-none grid">

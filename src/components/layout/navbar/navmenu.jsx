@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const Navmenu = ({ routes }) => {
   return (
-    <div className="md:hidden">
+    <div className="pointer-events-auto md:hidden">
       <Sheet className="">
         <SheetTrigger asChild>
           <MenuIcon className="size-10 text-[#fafafa]" />

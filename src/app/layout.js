@@ -2,6 +2,8 @@ import { Judson } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar/navbar";
 import { cn } from "@/lib/utils";
+import { Toaster } from "sonner";
+import Transition from "@/components/reusables/transistion";
 
 const judson = Judson({ subsets: ["latin"], weight: "400" });
 
@@ -14,8 +16,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={cn(judson.className, "pointer-events-none relative")}>
+        <Toaster
+          position="top-center"
+          richColors
+          toastOptions={{
+            unstyled: false,
+            classNames: {
+              error: "",
+              success: "",
+              warning: "",
+              info: "",
+            },
+          }}
+        />
         <Navbar />
+        {/* <Transition className="pointer-events-none relative"> */}
         {children}
+        {/* </Transition> */}
       </body>
     </html>
   );

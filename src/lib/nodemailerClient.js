@@ -5,6 +5,8 @@ import { contact_template, feedback_template } from "./templates/templates";
 const email = process.env.NEXT_PUBLIC_NODEMAILER_MAIL;
 const pass = process.env.NEXT_PUBLIC_NODEMAILER_PASS;
 
+console.log(process.env.NEXT_PUBLIC_NODEMAILER_PASS);
+
 export const tpt = nodemailer.createTransport({
   host: process.env.NEXT_PUBLIC_NODEMAILER_HOST,
   port: process.env.NEXT_PUBLIC_NODEMAILER_PORT,
@@ -31,7 +33,7 @@ export function compileContactTemplate(
   from_name,
   from_phone,
   from_mail,
-  message
+  message,
 ) {
   const template = handlebars.compile(contact_template);
   const htmlBody = template({
@@ -40,6 +42,6 @@ export function compileContactTemplate(
     from_mail: from_mail,
     message: message,
   });
-  console.log(htmlBody);
+  // console.log(htmlBody);
   return htmlBody;
 }

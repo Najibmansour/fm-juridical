@@ -41,7 +41,7 @@ export function FormTextarea({
     <div
       className={cn(
         className,
-        "pointer-events-auto flex h-full w-full flex-col",
+        "pointer-events-auto flex h-full w-full flex-col gap-1 text-xl",
       )}
     >
       <label className="">{title}:</label>

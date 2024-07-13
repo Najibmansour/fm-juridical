@@ -8,19 +8,19 @@ import { NextResponse } from "next/server";
 
 export async function POST(req, res) {
   const data = await req.json();
-  const { full_name, phone_num, from_mail, subject } = data;
-  console.log(data);
+  const { full_name, phone, email, message } = data;
+  // console.log(data);
 
   try {
-    const mail = await tpt.sendMail({
-      from: from_mail,
+    const mail = tpt.sendMail({
+      from: email,
       to: process.env.NEXT_PUBLIC_NODEMAILER_MAIL,
-      replyTo: from_mail,
-      subject: `Novo Contact from Website ${full_name}`,
-      html: compileContactTemplate(full_name, phone_num, from_mail, subject),
+      replyTo: email,
+      message: `Novo Contact from Website ${full_name}`,
+      html: compileContactTemplate(full_name, phone, email, message),
     });
 
-    return NextResponse.json({ message: "Success: email was sent" });
+    return NextResponse.json({ message: "SUCCESS: email was sent" });
   } catch (error) {
     console.log(error);
     NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE" });

@@ -3,6 +3,8 @@ import React, { useRef } from "react";
 import FormInput, { FormTextarea } from "./form_components/form_input";
 import { useForm } from "react-hook-form";
 import { Button } from "../ui/button";
+import { sendContact } from "@/lib/api/sendform";
+import { toast } from "sonner";
 
 const Form = () => {
   const {
@@ -14,8 +16,8 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (e) => {
-    if (e["bot_fiedld"] == "") {
-      sendFeedback(e)
+    if (true) {
+      sendContact(e)
         .then((res) => {
           console.log(res);
         })
@@ -83,9 +85,9 @@ const Form = () => {
       <div className="row-span-2 flex flex-col md:col-span-full md:col-start-1 md:row-span-6 md:row-start-3">
         <FormTextarea
           className=""
-          title="Feedback"
-          placeholder="Optional Feedback message..."
-          use_name="feedback"
+          title="Message"
+          placeholder="..."
+          use_name="message"
           errorsOBJ={errors}
           registerOBJ={register}
           restrictions={{
