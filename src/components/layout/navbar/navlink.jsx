@@ -1,9 +1,10 @@
+import TransitionLink from "@/components/reusables/transitionLink";
 import Link from "next/link";
 import React from "react";
 
 const NavLink = (props) => {
   return (
-    <Link
+    <TransitionLink
       {...props}
       key={props.title}
       href={props.href}
@@ -13,7 +14,7 @@ const NavLink = (props) => {
         {props.title}
       </span>
       <div className="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 bg-secondary duration-300 ease-out group-hover:w-full" />
-    </Link>
+    </TransitionLink>
   );
 };
 

@@ -6,13 +6,12 @@ import FithSection from "./section/5";
 
 const UpperSection = () => {
   return (
-    <div className="-z-40  row-start-1 col-start-1 col-span-1 ">
+    <div className="-z-40 col-span-1 col-start-1 row-start-1">
       <FirstSection />
-      <div className="h-svh w-full pointer-events-none"></div>
+      <div className="pointer-events-none h-svh w-full"></div>
       <ThirdSection />
-      <div className="h-svh w-full pointer-events-none"></div>
+      <div className="pointer-events-none h-svh w-full"></div>
       <FithSection />
-      <div className="h-svh w-full pointer-events-none"></div>
     </div>
   );
 };

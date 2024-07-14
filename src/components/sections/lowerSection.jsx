@@ -11,6 +11,7 @@ import {
   motion,
   useTransform,
   useMotionValueEvent,
+  motionValue,
 } from "framer-motion";
 
 const LowerSection = () => {
@@ -23,7 +24,7 @@ const LowerSection = () => {
     offset: ["start end", "end start"],
   });
 
-  const yscrollProgress = useTransform(scrollY, [0, 5555], [0, -1000]);
+  const yscrollProgress = useTransform(scrollY, [0, 5555], [0, -200]);
 
   useMotionValueEvent(yscrollProgress, "change", (latest) => {
     console.log("Page scroll: ", latest);

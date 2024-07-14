@@ -82,6 +82,6 @@
     @apply text-sm md:text-xl;
   }
   html {
-    @apply pointer-events-none;
+    @apply pointer-events-none bg-[#112525];
   }
 }

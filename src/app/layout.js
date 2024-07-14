@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/layout/navbar/navbar";
 import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
-import Transition from "@/components/reusables/transistion";
 
 const judson = Judson({ subsets: ["latin"], weight: "400" });
 
@@ -30,9 +29,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <Navbar />
-        {/* <Transition className="pointer-events-none relative"> */}
         {children}
-        {/* </Transition> */}
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 import React from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetFooter,
   SheetHeader,
@@ -9,6 +10,7 @@ import {
 } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
+import TransitionLink from "@/components/reusables/transitionLink";
 
 const Navmenu = ({ routes }) => {
   return (
@@ -26,9 +28,15 @@ const Navmenu = ({ routes }) => {
           </SheetHeader>
           <div className="grid gap-10 py-10 text-center">
             {routes.map(({ title, href }, i) => (
-              <Link key={i} href={href} className="text-4xl text-[#fafafa]">
-                {title}
-              </Link>
+              <SheetClose key={i} asChild>
+                <Link
+                  wait={true}
+                  href={href}
+                  className="text-4xl text-[#fafafa]"
+                >
+                  {title}
+                </Link>
+              </SheetClose>
             ))}
           </div>
           <SheetFooter>

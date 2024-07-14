@@ -6,7 +6,7 @@ import NavLink from "./navlink";
 
 const routes = [
   { title: "Home", href: "/" },
-  { title: "About us", href: "/about" },
+  { title: "About us", href: "/#about" },
   { title: "Services", href: "/services" },
   { title: "Locations", href: "/locations" },
   { title: "Contact", href: "/contact" },

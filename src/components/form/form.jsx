@@ -95,10 +95,10 @@ const Form = () => {
           }}
         />
       </div>
-      <div className="md:row-start- pointer-events-auto row-start-6 flex flex-row justify-center md:col-span-full md:col-start-1 md:row-span-4">
+      <div className="md:row-start- pointer-events-auto row-start-6 flex translate-y-3 flex-row items-center justify-center md:col-span-full md:col-start-1 md:row-span-4">
         <div className="flex flex-1 flex-row pl-4">
           {Object.keys(errors).length > 0 && (
-            <ul className="list-disc leading-tight text-secondary md:leading-none">
+            <ul className="list-disc text-sm leading-tight text-secondary md:text-lg md:leading-none">
               {Object.keys(errors).map((errorKey) => (
                 <li key={errorKey}>{errors[errorKey].message}</li>
               ))}
