@@ -12,7 +12,7 @@ import NavLink from "@/components/layout/navbar/navlink";
 const SecondSection = (props) => {
   return (
     <PageTemplate img={props.img} tint="bg-[#10151020]/65" {...props}>
-      <div className="flex h-svh w-full flex-col justify-center space-y-5 px-8 lg:px-28">
+      <div className="flex h-lvh w-full flex-col justify-center space-y-5 px-8 lg:px-28">
         <h2 className="z-50">About Us</h2>
         <p className="z-50 lg:w-1/2">
           With a strong presence in around 40 countries, Macari & Frangieh Legal
@@ -65,13 +65,12 @@ const SecondSection = (props) => {
           </Link>
         </div>
       </div>
-      <div className="absolute top-0 h-svh w-full overflow-x-hidden opacity-25">
+      <div className="absolute top-0 h-lvh w-full overflow-x-clip opacity-25">
         <motion.div ref={props.objref} style={{ y: props.scrollval }}>
           <Image
             src={bgImg}
             alt="bg-obj"
-            className="h-svh w-full"
-            objectFit="cover"
+            className="object-contain object-center"
           />
         </motion.div>
       </div>

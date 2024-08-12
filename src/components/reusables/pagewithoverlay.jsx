@@ -3,7 +3,7 @@ import React from "react";
 
 const PageWithOverlay = () => {
   return (
-    <div className="sticky top-0 h-svh w-full">
+    <div className="sticky top-0 h-lvh w-full">
       <Image src={IMG} layout="fill" alt="image" objectFit="cover" />
     </div>
   );

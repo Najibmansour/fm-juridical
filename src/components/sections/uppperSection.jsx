@@ -8,9 +8,9 @@ const UpperSection = () => {
   return (
     <div className="-z-40 col-span-1 col-start-1 row-start-1">
       <FirstSection />
-      <div className="pointer-events-none h-svh w-full"></div>
+      <div className="pointer-events-none h-lvh w-full"></div>
       <ThirdSection />
-      <div className="pointer-events-none h-svh w-full"></div>
+      <div className="pointer-events-none h-lvh w-full"></div>
       <FithSection />
     </div>
   );

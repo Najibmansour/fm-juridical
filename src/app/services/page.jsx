@@ -14,7 +14,7 @@ const Services = () => {
   return (
     <main>
       <div className="pointer-events-none grid">
-        <div className="pointer-events-auto col-span-1 col-start-1 row-start-1 h-svh">
+        <div className="pointer-events-auto col-span-1 col-start-1 row-start-1 h-lvh">
           <div className="-z-40">
             <PageTemplate img={PATTERN} className="border-b-2 border-white">
               <div className="flex h-full w-full flex-col items-center justify-start py-28">

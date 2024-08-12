@@ -8,7 +8,7 @@ import Link from "next/link";
 const ThirdSection = (props) => {
   return (
     <PageTemplate img={img} tint="bg-[#163131]/90" {...props} id="about">
-      <div className="flex h-svh w-full flex-col justify-center space-y-5 px-8 lg:px-28">
+      <div className="flex h-lvh w-full flex-col justify-center space-y-5 px-8 lg:px-28">
         <h2 className="z-50">Services</h2>
         <p className="z-50 lg:w-1/2">
           For you to be linked in a legal way to the global market, we provide
